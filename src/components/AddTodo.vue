@@ -20,10 +20,11 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addTodos']),
+    ...mapActions(['addTodo']),
     onSubmit(e)  {
       e.preventDefault();
-      this.addTodos(this.title)
+      this.addTodo(this.title)
+      this.title = ""
     }
   }
 }
